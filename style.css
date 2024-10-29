@@ -1,0 +1,121 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+
+
+:root {
+  --clr-primary-hsl-400: 75, 94%, 57%;
+  --clr-primary-hsl-500: 0, 0%, 100%;
+
+  --clr-neutral-hsl-100: 0, 0%, 20%;
+  --clr-neutral-hsl-200: 0, 0%, 12%;
+  --clr-neutral-hsl-300: 0, 0%, 8%;
+
+  --clr-neutral-100: hsl(var(--clr-neutral-hsl-100));
+  --clr-neutral-200: hsl(var(--clr-neutral-hsl-200));
+  --clr-neutral-300: hsl(var(--clr-neutral-hsl-300));
+
+  --clr-primary-400: hsl(var(--clr-primary-hsl-400));
+  --clr-primary-500: hsla(var(--clr-primary-hsl-500));
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  place-content: center;
+  background-color: hsl(var(--clr-neutral-hsl-300));
+
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+.profile {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  gap: 13px;
+  border-radius: 15px;
+  background-color: hsl(var(--clr-neutral-hsl-200));
+  max-width: 335px;
+  padding: 30px
+}
+.aa {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.image {
+  border-radius: 50%;
+  width: 80px;
+}
+
+.name {
+  font-weight: bold;
+  color: var(--clr-primary-500);
+  font-size: 1.25rem;
+  gap: 0px;
+
+}
+
+.location {
+  font-weight: bold;
+  color: var(--clr-primary-400);
+}
+
+.job {
+  color: rgb(198, 196, 196);
+}
+
+.skills {
+  color: var(--clr-primary-500);
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px;
+  background-color: var(--clr-neutral-100);
+  border-radius: 6px;
+}
+
+
